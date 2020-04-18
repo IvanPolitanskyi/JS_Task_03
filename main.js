@@ -56,3 +56,35 @@ for (let i = 0; i < arr1.length; i++) {
     }
 }
 console.log('task 6 the number of even positive elements: ', task6);
+
+let task7 = 0;
+for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] >= 0 && arr1[i] % 2 == 0) {
+        task7 = task7 + arr1[i];
+    }
+}
+console.log('task 7 sum of even positive elements: ', task7);
+
+let task8 = 0;
+for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] >= 0 && arr1[i] % 2 != 0) {
+        task8 = task8 + arr1[i];
+    }
+}
+console.log('task 8 sum of odd positive elements: ', task8);
+
+let task9 = 1;
+for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] >= 0) {
+        task9 = task9 * arr1[i];
+    }
+}
+console.log('task 9 product of positive elements: ', task9);
+
+let task10 = 0;
+for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] == 4) {
+        task10++;
+    }
+}
+console.log('task 10 number of elements equal to 4: ', task10);
