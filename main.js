@@ -90,25 +90,25 @@ for (let i = 0; i < arr1.length; i++) {
 console.log('task 10 number of elements equal to 4: ', task10);
 
 let task11 = 0;
-let arrTask11=arr1.slice(0);
-task11=arrTask11[0];
-for (let i=1; i < arrTask11.length; i++) {
-    if (task11<arrTask11[i]){
+let arrTask11 = arr1.slice(0);
+task11 = arrTask11[0];
+for (let i = 1; i < arrTask11.length; i++) {
+    if (task11 < arrTask11[i]) {
         task11 = arrTask11[i];
     }
 }
-for (let i=0; i < arrTask11.length; i++) { 
-    if(arrTask11[i]!=task11){
-        arrTask11[i]=0
+for (let i = 0; i < arrTask11.length; i++) {
+    if (arrTask11[i] != task11) {
+        arrTask11[i] = 0
     }
 }
 
-console.log ('task 11 max: ', task11);
-console.log ('reset to zero: ', arrTask11);
+console.log('task 11 max: ', task11);
+console.log('reset to zero: ', arrTask11);
 
-let arr2 = [46,4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47, 16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37]
-let arrTask2=[];
-for (let i=0; i < arr1.length; i++) {
-    arrTask2[i]=arr1[i]-arr2[i];
+let arr2 = [46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47, 16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37]
+let arrTask2 = [];
+for (let i = 0; i < arr1.length; i++) {
+    arrTask2[i] = arr1[i] - arr2[i];
 }
 console.log('task 12 difference of the corresponding array elements in the new array: ', arrTask2);
