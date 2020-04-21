@@ -1,114 +1,109 @@
 let arr1 = [16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47]
-let task1 = [0, 0]
+
+let sumOfPositive = 0;
+let quantOfPositive =0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0) {
-        task1[0] = task1[0] + arr1[i];
-        task1[1]++;
+        sumOfPositive = sumOfPositive + arr1[i];
+        quantOfPositive++;
     }
 }
-console.log('task 1 sum: ', task1[0]);
-console.log('       quantity: ', task1[1]);
+console.log('task 1 sum: ', sumOfPositive);
+console.log('       quantity: ', quantOfPositive);
 
-let task2 = [0, 0];
-task2[0] = arr1[0];
+let minElement=arr1[0];;
+let indexOfMin=0;
 for (let i = 1; i < arr1.length; i++) {
-    if (task2[0] > arr1[i]) {
-        task2[0] = arr1[i];
-        task2[1] = i;
+    if (minElement > arr1[i]) {
+        minElement = arr1[i];
+        indexOfMin = i;
     }
 
 }
-console.log('task 2 min: ', task2[0]);
-console.log('       number: ', task2[1]);
+console.log('task 2 min: ', minElement);
+console.log('       index: ', indexOfMin);
 
-let task3 = [0, 0];
-task3[0] = arr1[0];
+let maxElement = arr1[0];
+let indexOfMax = 0;
 for (let i = 1; i < arr1.length; i++) {
-    if (task3[0] < arr1[i]) {
-        task3[0] = arr1[i];
-        task3[1] = i;
+    if (maxElement < arr1[i]) {
+        maxElement = arr1[i];
+        indexOfMax = i;
     }
 
 }
-console.log('task 3 max: ', task3[0]);
-console.log('       number: ', task3[1]);
+console.log('task 3 max: ', maxElement);
+console.log('       index: ', indexOfMax);
 
-let task4 = 0;
+let quantOfNegative = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] < 0) {
-        task4++;
+        quantOfNegative++;
     }
 }
-console.log('task 4 number of negative: ', task4);
+console.log('task 4 quantity of negative: ',quantOfNegative);
 
-let task5 = 0;
+let quantOfOddPositiv = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0 && arr1[i] % 2 != 0) {
-        task5++;
+        quantOfOddPositiv++;
     }
 }
-console.log('task 5 the number of odd positive elements: ', task5);
+console.log('task 5 the quantity of odd positive elements: ', quantOfOddPositiv);
 
-let task6 = 0;
+let quantOfEvenPositive = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0 && arr1[i] % 2 === 0) {
-        task6++;
+        quantOfEvenPositive++;
     }
 }
-console.log('task 6 the number of even positive elements: ', task6);
+console.log('task 6 the quantity of even positive elements: ', quantOfEvenPositive);
 
-let task7 = 0;
+let sumOfEvenPositive = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0 && arr1[i] % 2 == 0) {
-        task7 = task7 + arr1[i];
+        sumOfEvenPositive = sumOfEvenPositive + arr1[i];
     }
 }
-console.log('task 7 sum of even positive elements: ', task7);
+console.log('task 7 sum of even positive elements: ', sumOfEvenPositive);
 
-let task8 = 0;
+let sumOfOddPositive = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0 && arr1[i] % 2 != 0) {
-        task8 = task8 + arr1[i];
+        sumOfOddPositive = sumOfOddPositive + arr1[i];
     }
 }
-console.log('task 8 sum of odd positive elements: ', task8);
+console.log('task 8 sum of odd positive elements: ', sumOfOddPositive);
 
-let task9 = 1;
+let productOfPositive = 1;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] >= 0) {
-        task9 = task9 * arr1[i];
+        productOfPositive = productOfPositive * arr1[i];
     }
 }
-console.log('task 9 product of positive elements: ', task9);
+console.log('task 9 product of positive elements: ', productOfPositive);
 
-let task10 = 0;
+let quantOfElement = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] == 4) {
-        task10++;
+        quantOfElement++;
     }
 }
-console.log('task 10 number of elements equal to 4: ', task10);
+console.log('task 10 quantity of elements equal to 4: ', quantOfElement);
 
-let task11 = 0;
 let arrTask11 = arr1.slice(0);
-task11 = arrTask11[0];
-for (let i = 1; i < arrTask11.length; i++) {
-    if (task11 < arrTask11[i]) {
-        task11 = arrTask11[i];
-    }
-}
 for (let i = 0; i < arrTask11.length; i++) {
-    if (arrTask11[i] != task11) {
+    if (arrTask11[i] != maxElement) {
         arrTask11[i] = 0
     }
 }
 
-console.log('task 11 max: ', task11);
+console.log('task 11 max: ', maxElement);
 console.log('reset to zero: ', arrTask11);
 
 let arr2 = [46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47, 16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37]
-let arrTask2 = [];
+let arrTask13 = [];
 for (let i = 0; i < arr1.length; i++) {
-    arrTask2[i] = arr1[i] - arr2[i];
+    arrTask13[i] = arr1[i] - arr2[i];
 }
-console.log('task 12 difference of the corresponding array elements in the new array: ', arrTask2);
+console.log('task 12 difference of the corresponding array elements in the new array: ', arrTask13);
